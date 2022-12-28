@@ -77,3 +77,9 @@ def my_function(*kids):
 
 my_function(input("Enter your name: "), input("Enter your name: "), input("Enter your name: "))
 
+def myfuncton(n):
+ return lambda a: a * n
+mydoubler = myfunction(input("Enter a number: "))
+myfuncton(2)
+
+print(mydoubler(11))
