@@ -154,7 +154,34 @@ class cars:
     
     def __str__(self):
         return f"{self.name} is {self.color} and it costs is {self.price}" 
-car = [("Toyota", "Black", "2019", "100,000Ksh"), ("BMW", "White", "2018", "200,000Ksh"), ("Mercedes", "Red", "2017", "300,000Ksh"), ("Audi", "Blue", "2016", "400,000Ksh")]
+car = {("Toyota", "Black", "2019", "100,000Ksh"), ("BMW", "White", "2018", "200,000Ksh"), ("Mercedes", "Red", "2017", "300,000Ksh"), ("Audi", "Blue", "2016", "400,000Ksh")}
 
 above = list(filter(lambda x: (x[3] > "200,000Ksh"), car))
 print(above)
+
+
+# maximum number in a list
+import functools
+
+# list of numbers
+lis = [ 1 , 3, 5, 6, 2, ]
+
+print ("The maximum element of the list is : ",end="")
+print (functools.reduce(lambda a,b : a if a > b else b,lis))
+
+# In Python, an iterator is an object that can be used to iterate over the elements of a sequence (such as a list, tuple, or string). Iterators are implemented using two methods: __iter__() and __next__().
+# Define a list of integers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Get an iterator for the list
+iter_obj = iter(numbers)
+
+# Use the iterator to iterate over the list
+while True:
+    try:
+        # Get the next element from the iterator
+        element = next(iter_obj)
+        print(element)
+    except StopIteration:
+        # If there are no more elements, exit the loop
+        break
