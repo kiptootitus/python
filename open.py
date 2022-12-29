@@ -117,4 +117,44 @@ def say_Country(country):
     return f"Welcome, {country}!"
 
 print(say_Country("Kenya"))
+
      
+# lambda functions
+str1 ="Hello, My name is Titus"
+str2 ="Hello, My name is Nomad"
+str3 ="Hello, My name is Meshack"
+str3 ="Hello, My name is Kering"
+str4 ="Hello, My name is Faith"
+# lambda function
+re_upper = lambda str4: str4.upper()
+print(re_upper(str4))
+
+
+# lambda function with list
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# to multiply each number by 2
+result = list(map(lambda x: x * 2, numbers))
+print(result)
+
+
+li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+final = list(filter(lambda x: (x % 2 != 0), li))
+print(final)
+
+
+
+class cars:    
+    def __init__(self, name, color, model, price):
+        self.name = name
+        self.color = color
+        self.model = model
+        self.price = price
+    
+    def __str__(self):
+        return f"{self.name} is {self.color} and it costs is {self.price}" 
+car = [("Toyota", "Black", "2019", "100,000Ksh"), ("BMW", "White", "2018", "200,000Ksh"), ("Mercedes", "Red", "2017", "300,000Ksh"), ("Audi", "Blue", "2016", "400,000Ksh")]
+
+above = list(filter(lambda x: (x[3] > "200,000Ksh"), car))
+print(above)
