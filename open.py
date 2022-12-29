@@ -72,14 +72,49 @@ for x in mlist:
 
 
 
-def my_function(*kids):
-    print("The youngest child is " + kids[0])
+# def my_function(*kids):
+#     print("The youngest child is " + kids[0])
 
-my_function(input("Enter your name: "), input("Enter your name: "), input("Enter your name: "))
+# my_function(input("Enter your name: "), input("Enter your name: "), input("Enter your name: "))
 
-def myfuncton(n):
- return lambda a: a * n
-mydoubler = myfunction(input("Enter a number: "))
-myfuncton(2)
+# decorators
 
-print(mydoubler(11))
+def say_hello(name):
+    return f"Hello, {name}!"
+
+def shout(func):
+    def wrapper(name):
+        return func(name).upper()
+    return wrapper
+
+# Add the shout decorator to the say_hello function
+say_hello = shout(say_hello)
+
+print(say_hello("Alice"))  # prints "HELLO, ALICE!"
+
+@shout 
+def say_hi(name):
+    return f"Hi, {name}!"
+
+print(say_hi("Alice"))  # prints "HI, ALICE!"
+
+
+def say_Name(city):
+ return f"Welcome, {city}!"
+
+def tell(func):
+    def wrapper(city):
+        return func(city).italic()
+    return wrapper
+say_Name = tell(say_Name)
+
+
+print(say_Name("Nairobi"))
+
+
+@tell
+def say_Country(country):
+    return f"Welcome, {country}!"
+
+print(say_Country("Kenya"))
+     
