@@ -104,7 +104,7 @@ def say_Name(city):
 
 def tell(func):
     def wrapper(city):
-        return func(city).italic()
+        return func(city).lower()
     return wrapper
 say_Name = tell(say_Name)
 
