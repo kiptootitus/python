@@ -185,3 +185,13 @@ while True:
     except StopIteration:
         # If there are no more elements, exit the loop
         break
+    
+my_object = ['Maserati', 'Porsche', 'Ford']
+iter_object = iter(my_object)
+
+while True:
+    try:
+        element = next(iter_object)
+        print(element)
+    except StopIteration:
+        break
