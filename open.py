@@ -215,16 +215,82 @@ def shout(func):
 print(shout(my_Fun))
 
 
-class continent:
-    def __init__ (self, name, capital, GDP, population):
-        self.name = name
-        self.capital = capital
-        self.GDP = GDP
-        self.population = population
+# class continent:
+#     def __init__ (self, name, capital, GDP, population):
+#         self.name = name
+#         self.capital = capital
+#         self.GDP = GDP
+#         self.population = population
         
-    def __str__(self):
-        return f"{self.name} its {self.capital} and has a {self.GDP} with pop of {self.population}"
+#     def __str__(self):
+#         return f"{self.name} its {self.capital} and has a {self.GDP} with pop of {self.population}"
     
-city = {("Kenya", "Nairobi", "100,000", "50,000,000"), ("Uganda", "Kampala", "200,000", "60,000,000"), ("Tanzania", "Dodoma", "300,000", "70,000,000"), ("Rwanda", "Kigali", "400,000", "80,000,000")}
-above = list(filter(lambda x: (x[2] > "200,000"), city))
-print(above)
+# continent1 = {("Kenya", "Nairobi", "100,000", "50,000,000"), ("Uganda", "Kampala", "200,000", "60,000,000"), ("Tanzania", "Dodoma", "300,000", "70,000,000"), ("Rwanda", "Kigali", "400,000", "80,000,000")}
+# above = continent(filter(lambda x: (x[4] > "200,000"), continent1))
+# print(above)
+
+
+
+
+# classes and objects
+# python is an object oriented programming language
+# almost everything in python is an object, with its properties and methods
+# class is like blueprint for creating objects
+
+# create class
+class Robot:
+    def __init__(self, name, color, weight):
+        self.name = name
+        self.color = color
+        self.weight = weight
+    def __str__(self) :
+        return f"{self.name} is {self.color} and weighs {self.weight} kg"
+robot1 = Robot("Tom", "red", 30)
+robot2 = Robot("Jerry", "blue", 40)
+
+print(robot1.name)
+
+# __str__ method controls what happens when you try to print an object
+
+# class with object functions
+class computers:
+    def __init__(self, name, color, weight, price):
+        self.name = name
+        self.color = color
+        self.weight = weight
+        self.price = price
+    def my_func(self):
+        print(f"{self.name} is {self.color} and weighs {self.weight} kg")
+    
+comp1 = computers("Dell", "Black", 30, 1000)
+
+comp1.my_func()
+
+
+#class inheritance
+class phone:
+    def __init__(self, name, color, weight, price):
+        self.name = name
+        self.color = color
+        self.weight = weight
+        self.price = price
+    def print_name(self):
+        print(self.name)
+        
+# use the person class to create an object, and then execute the print_name method:
+phones = phone("Samsung", "Black", 30, 1000)
+phones.print_name()
+
+class Charger(phone):
+    pass
+phones1= Charger("Iphone", "Itel", 30, 1000)
+phones1.print_name()
+# using super 
+class Type(phone):
+    def __init__(self, name, color, weight, price, type):
+        super().__init__(name, color, weight, price)
+        self.type = type
+    def print_type(self):
+        print(self.type)
+x = Type("Samsung", "Black", 30, 1000, "Android")
+x.print_type()
