@@ -195,3 +195,11 @@ while True:
         print(element)
     except StopIteration:
         break
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def checkConsecutive(list):
+  list.sort()
+  for i in range(1, len(list)):
+    if list[i] - list[i - 1] != 1:
+      return False
+  return True
+print(checkConsecutive(list))
