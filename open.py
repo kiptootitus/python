@@ -203,3 +203,28 @@ def checkConsecutive(list):
       return False
   return True
 print(checkConsecutive(list))
+
+
+
+# recap 
+def my_Fun(hello):
+    return f"Hello, {hello}!"
+
+def shout(func):
+    return func("Titus")
+print(shout(my_Fun))
+
+
+class continent:
+    def __init__ (self, name, capital, GDP, population):
+        self.name = name
+        self.capital = capital
+        self.GDP = GDP
+        self.population = population
+        
+    def __str__(self):
+        return f"{self.name} its {self.capital} and has a {self.GDP} with pop of {self.population}"
+    
+city = {("Kenya", "Nairobi", "100,000", "50,000,000"), ("Uganda", "Kampala", "200,000", "60,000,000"), ("Tanzania", "Dodoma", "300,000", "70,000,000"), ("Rwanda", "Kigali", "400,000", "80,000,000")}
+above = list(filter(lambda x: (x[2] > "200,000"), city))
+print(above)
