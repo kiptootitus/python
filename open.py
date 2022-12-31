@@ -292,8 +292,10 @@ class Type(phone):
         self.type = type
     def print_type(self):
         print(self.type)
+# class object 
 x = Type("Samsung", "Black", 30, 1000, "Android")
 x.print_type()
 
 
 # python methods 
+
