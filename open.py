@@ -299,3 +299,18 @@ x.print_type()
 
 # python methods 
 
+# dunder methods
+
+# setitem assign value to an index
+def __setitem__(self, name, version):
+    if name in self.versions:
+        self[name] = version
+    else:
+        raise Exception("Invalid key")
+    
+# python modules 
+# built & user defined modules
+# import module
+from math import*
+
+print(sqrt(25))
