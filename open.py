@@ -314,3 +314,24 @@ def __setitem__(self, name, version):
 from math import*
 
 print(sqrt(25))
+
+import datetime
+
+today = datetime.datetime.today().weekday()
+
+if today == 'Monday' :
+    print("Here is the weather for today")
+elif today == 1:
+    print("Tuesday")
+elif today == 2:
+    print("Wednesday")
+elif today == 3:
+    print("Thursday")
+elif today == 4:
+    print("Friday")
+elif today == 'Saturday':
+    print("Here is the weather for today")
+else:
+    print("Sunday")
+
+    
