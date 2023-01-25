@@ -50,4 +50,8 @@ print (f_up)
 
 print(10%9)
 # example 6 math.frexp(x) returns the mantissa and exponent of x as the pair (m,e)
+import math
+t = 12.45
+fre_up = math.frexp(t)
+print(fre_up)
 # example 7 math.ldexp(x,y) returns x * (2**y)
