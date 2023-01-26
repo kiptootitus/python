@@ -1,2 +1,8 @@
-import matplotlib
-print(matplotlib.__version__)
+import numpy as np
+import matplotlib.pyplot 
+
+plt.plot([1,2,3,4], [1,4,9,16])
+plt.ylabel('some numbers')
+plt.xlabel('some numbers')
+
+plt.show()
