@@ -1,8 +1,7 @@
 import numpy as np
-import matplotlib.pyplot 
 
-plt.plot([1,2,3,4], [1,4,9,16])
-plt.ylabel('some numbers')
-plt.xlabel('some numbers')
+arr = np.array([1, 1, 1, 2, 3, 4, 5, 5, 6, 7])
 
-plt.show()
+x = np.unique(arr)
+
+print(x)
